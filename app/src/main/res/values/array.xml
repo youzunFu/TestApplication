@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="abc">
+        <item>永不</item>
+        <item>只有震動</item>
+        <item>只有提示音</item>
+        <item>震動與提示音</item>
+        <item>abc</item>
+        <item>111111111111</item>
+    </array>
+    <array name="notify_array">
+        <item>永不</item>
+        <item>只有震動</item>
+        <item>只有提示音</item>
+        <item>震動與提示音</item>
+        <item>abc</item>
+        <item>abcabccc</item>
+    </array>
+    <array name="plug">
+        <item>Plug1</item>
+        <item>Plug2</item>
+        <item>Plug3</item>
+        <item>Plug4</item>
+    </array>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="nkfust.edu.testapplication.MainActivity">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="tv1"
+        android:textSize="24dp" />
+
+    <Button
+        android:id="@+id/financeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ToFinance"
+        android:onClick="financeClick" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="viewtestClick"
+        android:text="To ListView" />
+
+    <Button
+        android:id="@+id/listview_practice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="listview_practiceClick"
+        android:text="listview_pra"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:onClick="pick_DateTime1"
+        android:text="clocktest"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/fragmentBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FragmentButton"
+        android:onClick="FragmentClick"/>
+
+
+</LinearLayout>
