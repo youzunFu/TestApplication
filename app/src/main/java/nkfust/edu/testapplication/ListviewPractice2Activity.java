@@ -61,7 +61,7 @@ public class ListviewPractice2Activity extends Activity {
 
 
 
-    /*
+/*
     class lv_BtnAdapter extends BaseAdapter {
 
         private ArrayList<HashMap<String,Object>> mAppList;
@@ -146,6 +146,8 @@ public class ListviewPractice2Activity extends Activity {
                 int vid =v.getId();
                 if (vid == itemView.ItemButton.getId()) {
                     Log.v("ola_log",String.valueOf(position));
+                  // Toast.makeText(ListviewPractice2Activity.this,position,Toast.LENGTH_SHORT).show();
+
 
                 }
 
@@ -155,6 +157,7 @@ public class ListviewPractice2Activity extends Activity {
         }
 
     }
-    */
+*/
+
 }
 

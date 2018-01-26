@@ -21,12 +21,6 @@
         android:text="ToFinance"
         android:onClick="financeClick" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="viewtestClick"
-        android:text="To ListView" />
 
     <Button
         android:id="@+id/listview_practice"
@@ -50,6 +44,56 @@
         android:layout_height="wrap_content"
         android:text="FragmentButton"
         android:onClick="FragmentClick"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="5"
+            android:hint="textName" />
+
+        <EditText
+            android:id="@+id/edmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="5"
+            android:hint="textmail" />
+
+        <Button
+            android:id="@+id/btnvolley"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.02"
+            android:text="Btnvolley" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/MPchartBtn"
+        android:onClick="MPchartClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MPchartView" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="BundleTestClick"
+        android:text="BundleTest" />
+
+    <Button
+        android:id="@+id/btnListview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="btnListviewClick"
+        android:text="Button" />
 
 
 </LinearLayout>

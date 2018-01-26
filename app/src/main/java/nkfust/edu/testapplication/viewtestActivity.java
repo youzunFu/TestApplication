@@ -105,8 +105,16 @@ public class viewtestActivity extends AppCompatActivity implements AdapterView.O
         public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
             ViewGroup vg = (ViewGroup)view;
             TextView tv = (TextView) vg.findViewById(R.id.text1);
-            //Button Btn2 = (Button) vg.findViewById(R.id.button2);
+            Button Btn2 = (Button) vg.findViewById(R.id.button2);
+            final int Num;
+            Num = i;
            Toast.makeText(viewtestActivity.this,tv.getText().toString(),Toast.LENGTH_SHORT).show();
+           Btn2.setOnClickListener(new View.OnClickListener() {
+               @Override
+               public void onClick(View v) {
+                   Toast.makeText(viewtestActivity.this,Num,Toast.LENGTH_SHORT).show();
+               }
+           });
             //Toast.makeText(viewtestActivity.this,"View:"+view+"\ni:"+i+"\nlong:"+l,Toast.LENGTH_SHORT).show();
         }
     }

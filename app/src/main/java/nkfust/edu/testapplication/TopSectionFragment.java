@@ -1,6 +1,7 @@
 package nkfust.edu.testapplication;
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
+//import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -18,7 +19,7 @@ public class TopSectionFragment extends Fragment {
     TopSectionListener activityCommander;
 
     public interface TopSectionListener {
-        public void createMeme(String top,String bottom);
+        public void createMeme(String top);
     }
 
     @Override
@@ -26,12 +27,13 @@ public class TopSectionFragment extends Fragment {
         super.onAttach(context);
         try{
             activityCommander = (TopSectionListener) context;
-        }catch (ClassCastException e ){
+        }catch (ClassCastException e){
             throw new ClassCastException(context.toString());
         }
     }
 
     @Nullable
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 
@@ -51,7 +53,6 @@ public class TopSectionFragment extends Fragment {
     }
 
     void DankBtnClick(View v){
-
-
+        activityCommander.createMeme(topEd.getText().toString());
     }
 }

@@ -19,4 +19,6 @@
     <string name="Item">whatever</string>
     <string name="fragment_txt">DANK Memo</string>
     <string name="fragment_picture_toptxt">top</string>
+    <string name="app_name">ListViewDraggingAnimation</string>
+
 </resources>
