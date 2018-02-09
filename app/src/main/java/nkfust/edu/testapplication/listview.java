@@ -21,7 +21,7 @@ import java.util.Objects;
 public class listview extends AppCompatActivity {
 
     private ArrayList<String> data = new ArrayList<String>();
-    public int listPositon ;
+    private String events[] = {"當前事件","未來事件","歷史事件"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,22 +29,21 @@ public class listview extends AppCompatActivity {
         setContentView(R.layout.activity_listview);
 
         ListView lv = (ListView) findViewById(R.id.listview1);
+        lv.setFilterText();
         generateListContent();
 
         lv.setAdapter(new MyListAdapter(this, R.layout.listview, data));
-
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(listview.this, "List item was clicked at" + position, Toast.LENGTH_SHORT).show();
-                listPositon = position;
             }
         });
 
     }
 
     public void generateListContent() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 3; i++) {
             data.add("This is row number" + i);
         }
     }
@@ -70,13 +69,12 @@ public class listview extends AppCompatActivity {
 
     private class MyListAdapter extends ArrayAdapter<String> {
         private int layout;
-        private List<String> brandInfoList;
+        //private List<String> brandInfoList;
 
         private MyListAdapter(Context context, int resource, List<String> objects) {
             super(context, resource, objects);
             // resource：ListView子項佈局的id;objects：資料
             layout = resource;
-            brandInfoList = objects ;
         }
 /*
         @Override
@@ -97,7 +95,7 @@ public class listview extends AppCompatActivity {
 
         @Override
         public View getView(final int position, View convertView, ViewGroup parent) {
-           ControlItem controlitem = getItem(listPositon);
+           //ControlItem controlitem = getItem(position);
 
             View view;
             ViewHolder viewHolder;
@@ -134,16 +132,16 @@ public class listview extends AppCompatActivity {
 
                 });
                 view.setTag(viewHolder);
-                viewHolder.btnlistview1.setTag(controlitem);
+              //  viewHolder.btnlistview1.setTag(controlitem);
             }else{
                     view = convertView;
                     viewHolder = (ViewHolder) view.getTag();
-                    viewHolder.btnlistview1.setTag(controlitem);
+              //      viewHolder.btnlistview1.setTag(controlitem);
                 }
 
-                viewHolder.imagelistview1.setImageResource(controlitem.getImageId());
-                viewHolder.tvlistview1.setText(controlitem.getName());
-                viewHolder.btnlistview1.setText(controlitem.getBtnnum() + "");
+              //  viewHolder.imagelistview1.setImageResource(controlitem.getImageId());
+             //   viewHolder.tvlistview1.setText(controlitem.getName());
+             //   viewHolder.btnlistview1.setText(controlitem.getBtnnum() + "");
 
                 if (position < 3) {
                 view.setBackgroundColor(0xFF0000FF);
